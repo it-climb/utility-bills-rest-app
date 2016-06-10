@@ -14,7 +14,7 @@
     <script src="app.js"></script>
 </head>
 <body>
-<div class="container" ng-controller='MainCtrl'>
+<div class="container" ng-controller='MainCtrl' ng-init="init()">
 	<h1>{{greeting}}</h1>
 	<div ng-show="!loggedIn()">
 		<form ng-submit="login()">
@@ -54,6 +54,7 @@
 			</div>
 		</div>
 	</div>
+
 </div>
 </body>
 </html>

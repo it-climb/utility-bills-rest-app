@@ -28,7 +28,6 @@ public class  UserController {
     public LoginResponse login(@RequestBody final UserLogin login)
         throws ServletException {
         List<Admin> list = adminRepository.findByName(login.name);
-        System.out.println(login.name + " " + login.password);//
         Admin admin = null;
         try {
             admin = list.get(0);
@@ -49,7 +48,6 @@ public class  UserController {
     @SuppressWarnings("unused")
     private static class UserLogin {
         public String name;
-//        public Password password;
         public String password;
     }
 
