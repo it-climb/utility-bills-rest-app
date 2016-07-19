@@ -7,54 +7,98 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/style.css">
+    <link rel="stylesheet" href="libs/animate.min.css">
     <script src="libs/jquery/jquery.js"></script>
     <script src="libs/bootstrap/js/bootstrap.js"></script>
     <script src="libs/angular/angular.js"></script>
     <script src="libs/angular/angular-cookies.js"></script>
     <script src="app.js"></script>
 </head>
-<body>
-<div class="container" ng-controller='MainCtrl' ng-init="init()">
-	<h1>{{greeting}}</h1>
-	<div ng-show="!loggedIn()">
-		<form ng-submit="login()">
-			Username:
-			<input type="text" ng-model="userName"/>
-			Password:
-			<input type="password" ng-model="userPassword"/><span><input type="submit" value="Login"/>
-		</form>
-	</div>
-	<div class="alert alert-danger" role="alert" ng-show="error.data.message">
-	  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-	  <span class="sr-only">Error:</span>
-	  {{error.data.message}}
-	</div>	
-	<div ng-show="loggedIn()">
-		<div class="row">
-			<div class="col-md-6">
-				<h3><span class="label label-success">Success!</span> Welcome {{userName}}</h3>
-	 			<a href ng-click="logout()">(logout)</a>
-			</div>
-			<div class="col-md-4">
-	 	<div class="row header">
-			<div class="col-sm-4">{{userName}} is a</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-2">User</div>
-			<div class="col-sm-2"><span class="glyphicon glyphicon-ok" aria-hidden="true" ng-show="roleUser"></span></div>
-		</div>
-		<div class="row">
-			<div class="col-sm-2">Admin</div>
-			<div class="col-sm-2"><span class="glyphicon glyphicon-ok" aria-hidden="true" ng-show="roleAdmin"></span></div>
-		</div>	
-		<div class="row">
-			<div class="col-sm-2">Foo</div>
-			<div class="col-sm-2"><span class="glyphicon glyphicon-ok" aria-hidden="true" ng-show="roleFoo"></span></div>
-		</div>				
-			</div>
-		</div>
-	</div>
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
-</div>
+<!-- Home section
+================================================== -->
+<section id="home" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<h2 class=" animated fadeInDown" data-wow-delay="0.2s">PRESENT BY Agios & Co.</h2>
+				<h1 class=" animated fadeInDown">MODERN TOWN</h1>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-4">
+                                <input type="email" class="form form-control animated fadeInUp" data-wow-delay="0.4s">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="password" class="form form-control animated fadeInUp" data-wow-delay="0.6s">
+                            </div>
+                            <div class="col-lg-2">
+                                <input role="button" type="submit" class="btn btn-sm animated fadeInUp" data-wow-delay="0.6s" value="LOGIN">
+                            </div>
+                            <div class="col-lg-1"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3"></div>
+                </div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+
+<!--<div class="container" ng-controller='MainCtrl' ng-init="init()">-->
+	<!--<h1>{{greeting}}</h1>-->
+	<!--<div ng-show="!loggedIn()">-->
+		<!--<form ng-submit="login()">-->
+			<!--Username:-->
+			<!--<input type="text" ng-model="userName"/>-->
+			<!--Password:-->
+			<!--<input type="password" ng-model="userPassword"/><span><input type="submit" value="Login"/>-->
+		<!--</form>-->
+	<!--</div>-->
+	<!--<div class="alert alert-danger" role="alert" ng-show="error.data.message">-->
+	  <!--<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>-->
+	  <!--<span class="sr-only">Error:</span>-->
+	  <!--{{error.data.message}}-->
+	<!--</div>	-->
+	<!--<div ng-show="loggedIn()">-->
+		<!--<div class="row">-->
+			<!--<div class="col-md-6">-->
+				<!--<h3><span class="label label-success">Success!</span> Welcome {{userName}}</h3>-->
+	 			<!--<a href ng-click="logout()">(logout)</a>-->
+			<!--</div>-->
+			<!--<div class="col-md-4">-->
+	 	<!--<div class="row header">-->
+			<!--<div class="col-sm-4">{{userName}} is a</div>-->
+		<!--</div>-->
+		<!--<div class="row">-->
+			<!--<div class="col-sm-2">User</div>-->
+			<!--<div class="col-sm-2"><span class="glyphicon glyphicon-ok" aria-hidden="true" ng-show="roleUser"></span></div>-->
+		<!--</div>-->
+		<!--<div class="row">-->
+			<!--<div class="col-sm-2">Admin</div>-->
+			<!--<div class="col-sm-2"><span class="glyphicon glyphicon-ok" aria-hidden="true" ng-show="roleAdmin"></span></div>-->
+		<!--</div>	-->
+		<!--<div class="row">-->
+			<!--<div class="col-sm-2">Foo</div>-->
+			<!--<div class="col-sm-2"><span class="glyphicon glyphicon-ok" aria-hidden="true" ng-show="roleFoo"></span></div>-->
+		<!--</div>				-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+
+<!--</div>-->
+
+
+
 </body>
 </html>
